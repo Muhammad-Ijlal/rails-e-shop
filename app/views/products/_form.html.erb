@@ -1,0 +1,35 @@
+<div class="container p-5 mb-4 bg-light">
+  <%= form_with(model: @product, data: {turbo: false}) do |f| %>
+    <form>
+      <div class="form-group row mb-5">
+        <%= f.label :title, class: "form-label" %><br/>
+        <%= f.text_field :title, class: "form-control", placeholder: "Enter title"%>
+      </div>
+      <div class="form-group row mb-5">
+        <%= f.label :short_description, class: "form-label" %><br/>
+        <%= f.text_area :short_description, rows: 2, class: "form-control", placeholder: "Enter short description"%>
+      </div>
+      <div class="form-group row mb-5">
+        <%= f.label :description, class: "form-label" %><br/>
+        <%= f.rich_text_area :description, rows: 2, class: "form-control", placeholder: "Enter description"%>
+      </div>
+      <div class="form-group row mb-5">
+        <div class="col-6">
+          <%= f.label :price, class: "form-label" %><br/>
+          <%= f.number_field :price, class: "form-control"%>
+        </div> 
+        <div class="col-3">
+          <%= f.label :category, class: "form-label" %><br/>
+          <%= f.collection_select(:category_id, Category.all, :id, :title, { prompt: "Select category" }) %>
+        </div>
+        <div class="col-3">
+          <%= f.label :pictures, class: "form-label" %><br/>
+          <%= f.file_field :pictures, multiple: true%>
+        </div>  
+      </div>
+      <div class="form-group row justify-content-center md-5">
+        <%= f.submit class: "col-5 text-center btn btn-success"%>
+      </div>      
+    </form>
+  <% end %> 
+</div>
