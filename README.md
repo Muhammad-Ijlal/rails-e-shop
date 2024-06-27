@@ -21,8 +21,6 @@ Utilizes Redux for managing the state of the application, particularly for handl
 
 
 ## Installation Instructions
-Provide step-by-step instructions on how to install the project.
-
 ### Prerequisites
 
 - Ruby 3.0.0
@@ -33,12 +31,12 @@ Provide step-by-step instructions on how to install the project.
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/username/projectname.git
+    git clone https://github.com/username/rails-e-shop.git
     ```
 
 2. Navigate to the project directory:
     ```sh
-    cd projectname
+    cd rails-e-shop
     ```
 
 3. Install the required dependencies:
